@@ -1,11 +1,11 @@
 #include <iostream>
-#include "ListArray.h"
+#include "ListLinked.h"
 
 int main(){
     std::cout << std::boolalpha; // configuramos cout para mostrar true/false en lugar de 0/1.
 
-    ListArray<int> list;
-
+    ListLinked<int> list;
+    
     std::cout << list << std::endl; 
     std::cout << "size(): " << list.size() << std::endl; 
     std::cout << "empty(): " << list.empty() << std::endl; 
@@ -83,6 +83,7 @@ int main(){
     } catch (std::out_of_range &e){
         std::cout << "l.remove(3) => std::out_of_range: " << e.what() << std::endl; 
     }
+
     int num;
     int tam=list.size();
     for(int i=0;i<tam;i++){
@@ -90,5 +91,7 @@ int main(){
             cout << num << ", ";
     }
     cout<< endl;
-    return 0;
+    
+    return 0;   
+
 }
